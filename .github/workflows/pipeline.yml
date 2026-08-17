@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+      - 'feature/**'
+  pull_request:
+    branches:
+      - main
 
 jobs:
   hello-ci:
@@ -34,7 +38,7 @@ jobs:
         run: echo "Pipeline ejecutado correctamente."
 
       - name: Mostrar mensaje de éxito
-        run: echo "¡Pipeline completado con éxito!"  
-      
+        run: echo "¡Pipeline completado con éxito!"
+        
       - name: Provocar error intencional
-        run: exit 1
+        run: exit 1  
