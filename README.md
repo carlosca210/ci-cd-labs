@@ -1,5 +1,5 @@
 ### Pagina de información del proyecto
-En adelante escribiremos información relevante a este proyecto de pipeline.
+En adelante escribiremos información relevante a este proyecto de pipeline 
 
 ## Instrucciones para crear un nuevo bramch en este repositorio
 
