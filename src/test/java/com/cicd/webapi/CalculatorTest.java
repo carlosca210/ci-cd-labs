@@ -10,7 +10,7 @@ public class CalculatorTest {
     void testAdd() {
         Calculator calculator = new Calculator();
         //cambiamos el resultado esperado por uno equivocado
-        assert calculator.add(2, 3) == 10;
+        assert calculator.add(2, 3) == 5;
         assert calculator.add(-2, -3) == -5;
     }
 
