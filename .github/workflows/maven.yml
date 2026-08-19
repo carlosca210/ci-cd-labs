@@ -27,7 +27,7 @@ jobs:
       run: mvn -B compile --file pom.xml
 
     - name: Ejecutar pruebas unitarias
-      run: mvn -B test --file pom.xml
+      run: mvn -B test jacoco:report --file pom.xml
 
     # --- PARTE 3: PUBLICAR ARTEFACTOS ---
 
