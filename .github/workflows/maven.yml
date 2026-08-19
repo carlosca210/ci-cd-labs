@@ -28,3 +28,19 @@ jobs:
 
     - name: Ejecutar pruebas unitarias
       run: mvn -B test --file pom.xml
+
+    # --- PARTE 3: PUBLICAR ARTEFACTOS ---
+
+    - name: Publicar reporte de ejecucion de pruebas (Surefire)
+      uses: actions/upload-artifact@v4
+      if: always() # Se ejecuta incluso si fallan las pruebas para ver qué falló
+      with:
+        name: test-execution-report
+        path: target/surefire-reports/
+
+    - name: Publicar reporte de cobertura de codigo (JaCoCo)
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: code-coverage-report
+        path: target/site/jacoco/
